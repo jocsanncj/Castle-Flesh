@@ -75,3 +75,12 @@ class Gestion:
         print("Sesión iniciada correctamente")  #Si los datos son correctos, permite iniciar sesión
         return True
     
+    def info_jugador(self, usuario):
+        if usuario not in self.jugadores:
+            return None
+            
+        return self.jugadores[usuario]
+    
+    
+
+    
