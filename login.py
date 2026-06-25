@@ -110,3 +110,13 @@ class Gestion:
             )
 
         return lista[:5]
+    
+    def top_atacantes(self): #Función que obtiene los cinco jugadores con más victorias como atacante
+        lista = list(self.jugadores.items())
+
+        lista.sort(
+            key=lambda jugador: jugador[1]["victorias_atacante"],
+            reverse=True
+        )
+
+        return lista[:5] #Retorna únicamente los primeros cinco jugadores
