@@ -36,3 +36,42 @@ class Gestion:
                 
         except OSError: #Si el archivo está dañado, da un error
             print("No fue posible guardar a los jugadores")
+
+    def registrar_usuario(self, usuario, contraseña): #Función que registra un nuevo jugador en el sistema
+        
+        usuario = usuario.strip() #Elimina espacios innecesarios al inicio y al final del usuario
+
+        if usuario == "" or contraseña == "": #Verifica que el usuario y la contraseña tengan contenido
+            print("Coloque un nombre de usuario y contraseña válidos")
+            return False
+        
+        if usuario in self.jugadores: #Comprueba que el nombre de usuario no esté registrado
+            print("Este usuario ya se encuentra registrado")
+            return False
+        
+        self.jugadores[usuario] = { #Guarda la contraseña y establece las victorias iniciales en cero
+            "contraseña": contraseña,
+            "victorias_defensor": 0,
+            "victorias_atacante": 0
+        }
+
+#Actualiza el archivo .json con el nuevo jugador
+        self.guardar_jugador()
+        print("Usuario registrado correctamente")
+        return True
+    
+    def iniciar_sesion(self, usuario, contraseña): #Función que verifica los datos para iniciar sesión
+        usuario = usuario.strip()
+
+        if usuario not in self.jugadores:
+            print("El usuario no se encuentra registrado")
+            return False
+        
+        #Compara la contraseña ingresada con la contraseña guardada
+        if self.jugadores[usuario]["contraseña"] != contraseña:
+            print("Contraseña incorrecta. Inténtelo de nuevo.")
+            return False
+        
+        print("Sesión iniciada correctamente")  #Si los datos son correctos, permite iniciar sesión
+        return True
+    
