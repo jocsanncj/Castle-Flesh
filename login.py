@@ -101,4 +101,12 @@ class Gestion:
         self.guardar_jugador() #Guarda la nueva cantidad de victorias en el archivo
         print(f"Victoria como {rol} agregada a {usuario} correctamente")
     
-        
+    def top_defensores(self): #Función que obtiene los cinco jugadores con más victorias como defensor
+        lista = list(self.jugadores.items())
+
+        lista.sort( #Ordena a los jugadores de mayor a menor según sus victorias
+            key=lambda jugador: jugador[1]["victorias_defensor"],
+            reverse=True
+            )
+
+        return lista[:5]
