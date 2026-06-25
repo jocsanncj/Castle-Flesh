@@ -81,6 +81,24 @@ class Gestion:
             
         return self.jugadores[usuario]
     
-    
+    def sumar_victorias(self, usuario, rol): #Función que aumenta las victorias del jugador según su rol
+        if usuario not in self.jugadores:
+            print("Jugador no existente")
+            return False
+        
+        rol = rol.lower().strip() #Convierte el rol a minúscula y elimina espacios innecesarios
 
+        if rol == "defensor":
+            self.jugadores[usuario]["victorias_defensor"] += 1 
+
+        elif rol == "atacante":
+            self.jugadores[usuario]["victoias_atacante"] += 1
+
+        else:
+            print("El rol no es válido") #Evita guardar un rol distinto de defensor o atacante
+            return False
+        
+        self.guardar_jugador() #Guarda la nueva cantidad de victorias en el archivo
+        print(f"Victoria como {rol} agregada a {usuario} correctamente")
     
+        
