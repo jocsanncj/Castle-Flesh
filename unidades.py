@@ -198,3 +198,35 @@ class Unidad:
             if self.turnos_movimiento_extra == 0:
                 self.movimiento_extra = 0
 
+    def congelar(self, turnos=1):
+        #Comprueba que la cantidad de turnos sea válida
+        if not isinstance(turnos, int) or turnos <= 0:
+            print("Los turnos de congelamiento deben ser enteros positivos")
+            return False
+
+        #Impide congelar una unidad eliminada
+        if self.esta_eliminada():
+            return False
+
+        #Aplica el estado de congelamiento
+        self.turnos_congelada = turnos
+        self.estado = "congelada"
+        return True
+
+    def esta_eliminada(self):
+        #Retorna verdadero cuando la unidad no tiene vida
+        return self.vida <= 0
+
+    def reiniciar(self):
+        #Restaura la vida completa de la unidad
+        self.vida = self.vida_maxima
+        #Elimina todos los efectos temporales
+        self.turnos_recarga = 0
+        self.turnos_proteccion = 0
+        self.turnos_congelada = 0
+        self.movimiento_extra = 0
+        self.turnos_movimiento_extra = 0
+        #Elimina la posición anterior
+        self.posicion = None
+        #Restaura el estado activo
+        self.estado = "activa"
