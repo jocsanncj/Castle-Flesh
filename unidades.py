@@ -113,3 +113,64 @@ class Unidad:
     def habilidad_disponible(self):
         #Comprueba si la habilidad está fuera de recarga
         return self.turnos_recarga == 0 and not self.esta_eliminada()
+    
+    def usar_habilidad(self, objetivo=None):
+        #Comprueba que la unidad pueda utilizar su habilidad
+        if not self.habilidad_disponible():
+            print(f"La habilidad de {self.nombre} todavía no está disponible")
+            return False
+
+        #Ejecuta la habilidad de ataque doble
+        if self.tipo_habilidad == "ataque_doble":
+            if objetivo is None or not hasattr(objetivo, "recibir_daño"):
+                print("La habilidad necesita un objetivo válido")
+                return False
+            objetivo.recibir_daño(self.daño * 2)
+
+        #Ejecuta la habilidad de escudo temporal
+        elif self.tipo_habilidad == "escudo":
+            self.turnos_proteccion = 2
+            self.estado = "protegida"
+
+        #Ejecuta la habilidad de curación
+        elif self.tipo_habilidad == "curacion":
+            self.curar(self.vida_maxima * 0.35)
+
+        #Ejecuta la habilidad de velocidad
+        elif self.tipo_habilidad == "velocidad":
+            self.movimiento_extra = 2
+            self.turnos_movimiento_extra = 2
+
+        #Ejecuta la habilidad de daño extra contra edificios
+        elif self.tipo_habilidad == "daño_edificios":
+            if objetivo is None or not hasattr(objetivo, "recibir_daño"):
+                print("La habilidad necesita un objetivo válido")
+                return False
+            objetivo.recibir_daño(self.daño * 1.5)
+
+        #Ejecuta la habilidad de daño en área
+        elif self.tipo_habilidad == "daño_area":
+            if not isinstance(objetivo, list):
+                print("La habilidad necesita una lista de objetivos")
+                return False
+            for elemento in objetivo:
+                if hasattr(elemento, "recibir_daño"):
+                    elemento.recibir_daño(self.daño)
+
+        #Ejecuta la habilidad de regeneración
+        elif self.tipo_habilidad == "regeneracion":
+            self.curar(self.vida_maxima * 0.25)
+
+        #Ejecuta la habilidad de intangibilidad
+        elif self.tipo_habilidad == "intangibilidad":
+            self.turnos_proteccion = 1
+            self.estado = "protegida"
+
+        #Evita ejecutar habilidades no reconocidas
+        else:
+            print("La habilidad no está implementada")
+            return False
+
+        #Activa la recarga de la habilidad
+        self.turnos_recarga = self.recarga_habilidad
+        return True
