@@ -261,3 +261,12 @@ class Unidad:
             f"Vida: {self.vida}/{self.vida_maxima} | "
             f"Daño: {self.daño} | Movimiento: {self.obtener_movimiento_actual()}"
         )
+
+
+class Facción:
+    def __init__(self, nombre, descripcion, unidades):
+        self.nombre = nombre
+        self.descripcion = descripcion
+        self.unidades = unidades
+
+        
