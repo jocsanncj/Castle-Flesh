@@ -230,3 +230,26 @@ class Unidad:
         self.posicion = None
         #Restaura el estado activo
         self.estado = "activa"
+
+    def crear_copia(self):
+        copia = deepcopy(self)
+        copia.reiniciar()
+        return copia
+    
+    def obtener_informacion(self):
+        return {
+            "nombre": self.nombre,
+            "faccion": self.faccion,
+            "costo": self.costo,
+            "vida": self.vida,
+            "vida_maxima": self.vida_maxima,
+            "daño": self.daño,
+                        "movimiento": self.movimiento,
+            "movimiento_actual": self.obtener_movimiento_actual(),
+            "habilidad": self.habilidad,
+            "recarga_habilidad": self.recarga_habilidad,
+            "turnos_recarga": self.turnos_recarga,
+            "sprite": self.sprite,
+            "posicion": self.posicion,
+            "estado": self.estado
+        }
