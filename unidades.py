@@ -269,4 +269,30 @@ class Facción:
         self.descripcion = descripcion
         self.unidades = unidades
 
+    def lista_unidades(self):
+        return list(self.unidades.keys())
+    
+    def obtener_plantilla(self, nombre_unidad):
+        if self.nombre not in self.unidades:
+            return None
         
+        return self.unidades[nombre_unidad]
+    
+    def crear_unidad(self, nombre_unidad):
+        plantilla = self.obtener_plantilla(nombre_unidad)
+
+        if plantilla is None:
+            print(f"La unidad {nombre_unidad} no pertenece a {self.nombre}")
+            return None
+        
+        return plantilla.crear_copia()
+    
+    def obtener_informacion(self):
+        return {
+            "nombre": self.nombre,
+            "descripcion": self.descripcion,
+            "unidades":  self.listar_unidades()
+        }
+    
+    def __str__(self):
+        return f"{self.nombre}: {",".join(self.listar_unidades())}"
