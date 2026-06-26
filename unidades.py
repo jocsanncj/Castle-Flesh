@@ -1,8 +1,10 @@
-from copy import deepcopy #Librería para crear copias de una tropa
+from copy import deepcopy
 
-ESTADOS = ("activa", "eliminaada", "congelada", "protegida")
 
 class Unidad:
+    #Estados permitidos para una unidad dentro de la partida
+    ESTADOS_VALIDOS = ("activa", "eliminada", "congelada", "protegida")
+
     def __init__(
         self,
         nombre,
@@ -11,67 +13,102 @@ class Unidad:
         vida,
         daño,
         movimiento,
-        habilidad, 
+        habilidad,
         tipo_habilidad,
-        recarga,
-        sprite
+        recarga_habilidad,
+        sprites
     ):
+        #Guarda el nombre de la unidad
         self.nombre = nombre
+        #Guarda la facción a la que pertenece la unidad
         self.faccion = faccion
+        #Guarda el costo de compra de la unidad
         self.costo = costo
+        #Guarda la vida máxima de la unidad
         self.vida_maxima = vida
+        #Guarda la vida actual de la unidad
         self.vida = vida
+        #Guarda el daño básico que puede causar
         self.daño = daño
+        #Guarda la cantidad de casillas que puede avanzar por turno
         self.movimiento = movimiento
+        #Guarda el nombre visible de la habilidad
         self.habilidad = habilidad
+        #Guarda el identificador interno de la habilidad
         self.tipo_habilidad = tipo_habilidad
-        self.recarga = recarga
-        self.sprite = sprite
+        #Guarda la cantidad de turnos que deben pasar para reutilizar la habilidad
+        self.recarga_habilidad = recarga_habilidad
+        #Guarda los turnos restantes antes de volver a usar la habilidad
         self.turnos_recarga = 0
-        self.estado = "activa"
+        #Guarda las rutas de los sprites organizadas por animación
+        self.sprites = sprites
+
+        #Guarda la animación que se está utilizando actualmente
+        self.animacion_actual = "idle"
+
+        #Guarda el índice del frame actual dentro de la animación
+        self.indice_frame = 0
+        #Guarda la posición actual de la unidad dentro del mapa
         self.posicion = None
-        self.mov_extra = 0
-        self.turnos_mov_extra = 0
-        self.turnos_protecc = 0
+        #Guarda el estado actual de la unidad
+        self.estado = "activa"
+        #Guarda la cantidad de turnos de protección restantes
+        self.turnos_proteccion = 0
+        #Guarda la cantidad de turnos de congelamiento restantes
         self.turnos_congelada = 0
+        #Guarda el aumento temporal de movimiento
+        self.movimiento_extra = 0
+        #Guarda la cantidad de turnos durante los que aplica el movimiento extra
+        self.turnos_movimiento_extra = 0
 
     def recibir_daño(self, cantidad):
+        #Comprueba que el daño recibido sea numérico
         if not isinstance(cantidad, (int, float)):
             print("La cantidad de daño debe ser numérica")
             return False
-        
+
+        #Comprueba que el daño no sea negativo
         if cantidad < 0:
             print("El daño no puede ser negativo")
             return False
-        
 
-        if self.turnos_protecc > 0:
+        #Reduce el daño a la mitad cuando la unidad está protegida
+        if self.turnos_proteccion > 0:
             cantidad = cantidad / 2
-        
+
+        #Resta el daño a la vida actual
         self.vida -= cantidad
 
+        #Evita que la vida quede en valores negativos
         if self.vida <= 0:
             self.vida = 0
-            self.estado = "eliminado"
+            self.estado = "eliminada"
+
+            #Cambia a la animación de muerte
+            self.cambiar_animacion("dying")
 
         return True
-    
-    def curar (self, cantidad):
+
+    def curar(self, cantidad):
+        #Comprueba que la curación sea numérica
         if not isinstance(cantidad, (int, float)):
             print("La cantidad de curación debe ser numérica")
             return False
-        
+
+        #Comprueba que la curación sea mayor que cero
         if cantidad <= 0:
             print("La curación debe ser mayor que cero")
             return False
-        
+
+        #Impide curar una unidad eliminada
         if self.esta_eliminada():
-            print("No se puede curar una tropa eliminada")
+            print("No se puede curar una unidad eliminada")
             return False
-        
+
+        #Aumenta la vida sin superar la vida máxima
         self.vida = min(self.vida + cantidad, self.vida_maxima)
         return True
-    
+
     def atacar(self, objetivo):
         #Comprueba que la unidad pueda actuar
         if not self.puede_actuar():
@@ -82,6 +119,9 @@ class Unidad:
         if not hasattr(objetivo, "recibir_daño"):
             print("El objetivo no puede recibir daño")
             return False
+
+        #Cambia a la animación de ataque
+        self.cambiar_animacion("slashing")
 
         #Aplica el daño básico al objetivo
         objetivo.recibir_daño(self.daño)
@@ -98,6 +138,9 @@ class Unidad:
             print("La posición debe tener el formato (fila, columna)")
             return False
 
+        #Cambia a la animación de movimiento
+        self.cambiar_animacion("walking")
+
         #Guarda la nueva posición de la unidad
         self.posicion = nueva_posicion
         return True
@@ -113,7 +156,7 @@ class Unidad:
     def habilidad_disponible(self):
         #Comprueba si la habilidad está fuera de recarga
         return self.turnos_recarga == 0 and not self.esta_eliminada()
-    
+
     def usar_habilidad(self, objetivo=None):
         #Comprueba que la unidad pueda utilizar su habilidad
         if not self.habilidad_disponible():
@@ -174,7 +217,7 @@ class Unidad:
         #Activa la recarga de la habilidad
         self.turnos_recarga = self.recarga_habilidad
         return True
-    
+
     def avanzar_turno(self):
         #Reduce la recarga de la habilidad
         if self.turnos_recarga > 0:
@@ -217,6 +260,56 @@ class Unidad:
         #Retorna verdadero cuando la unidad no tiene vida
         return self.vida <= 0
 
+    def cambiar_animacion(self, animacion):
+        #Comprueba que la animación exista dentro del diccionario de sprites
+        if animacion not in self.sprites:
+            print(f"La animación {animacion} no existe para {self.nombre}")
+            return False
+
+        #Cambia la animación actual
+        self.animacion_actual = animacion
+
+        #Reinicia el índice para comenzar desde el primer frame
+        self.indice_frame = 0
+        return True
+
+    def obtener_sprite_actual(self):
+        #Obtiene la lista de frames de la animación actual
+        frames = self.sprites.get(self.animacion_actual, [])
+
+        #Comprueba que la animación tenga imágenes disponibles
+        if not frames:
+            return None
+
+        #Retorna la ruta correspondiente al frame actual
+        return frames[self.indice_frame]
+
+    def avanzar_frame(self):
+        #Obtiene la lista de frames de la animación actual
+        frames = self.sprites.get(self.animacion_actual, [])
+
+        #Comprueba que existan frames para avanzar
+        if not frames:
+            return None
+
+        #Avanza al siguiente frame de la animación
+        self.indice_frame += 1
+
+        #Reinicia la animación cuando llega al último frame
+        if self.indice_frame >= len(frames):
+            self.indice_frame = 0
+
+        #Retorna la ruta del nuevo frame
+        return frames[self.indice_frame]
+
+    def obtener_frames(self, animacion=None):
+        #Usa la animación actual cuando no se especifica otra
+        if animacion is None:
+            animacion = self.animacion_actual
+
+        #Retorna una copia de la lista para evitar modificaciones externas
+        return self.sprites.get(animacion, []).copy()
+
     def reiniciar(self):
         #Restaura la vida completa de la unidad
         self.vida = self.vida_maxima
@@ -231,12 +324,20 @@ class Unidad:
         #Restaura el estado activo
         self.estado = "activa"
 
+        #Regresa a la animación de espera
+        self.animacion_actual = "idle"
+
+        #Reinicia el frame actual
+        self.indice_frame = 0
+
     def crear_copia(self):
+        #Crea una unidad nueva e independiente usando esta unidad como plantilla
         copia = deepcopy(self)
         copia.reiniciar()
         return copia
-    
+
     def obtener_informacion(self):
+        #Retorna los datos actuales de la unidad
         return {
             "nombre": self.nombre,
             "faccion": self.faccion,
@@ -244,16 +345,18 @@ class Unidad:
             "vida": self.vida,
             "vida_maxima": self.vida_maxima,
             "daño": self.daño,
-                        "movimiento": self.movimiento,
+            "movimiento": self.movimiento,
             "movimiento_actual": self.obtener_movimiento_actual(),
             "habilidad": self.habilidad,
             "recarga_habilidad": self.recarga_habilidad,
             "turnos_recarga": self.turnos_recarga,
-            "sprite": self.sprite,
+            "sprites": deepcopy(self.sprites),
+            "animacion_actual": self.animacion_actual,
+            "sprite_actual": self.obtener_sprite_actual(),
             "posicion": self.posicion,
             "estado": self.estado
         }
-    
+
     def __str__(self):
         #Retorna una representación legible de la unidad
         return (
@@ -263,36 +366,60 @@ class Unidad:
         )
 
 
-class Facción:
+class Faccion:
     def __init__(self, nombre, descripcion, unidades):
+        #Guarda el nombre de la facción
         self.nombre = nombre
+        #Guarda una descripción breve de la facción
         self.descripcion = descripcion
+        #Guarda las plantillas de unidades disponibles
         self.unidades = unidades
 
-    def lista_unidades(self):
+    def listar_unidades(self):
+        #Retorna los nombres de las unidades disponibles
         return list(self.unidades.keys())
-    
+
     def obtener_plantilla(self, nombre_unidad):
-        if self.nombre not in self.unidades:
+        #Comprueba que la unidad exista dentro de la facción
+        if nombre_unidad not in self.unidades:
             return None
-        
+        #Retorna la plantilla sin modificarla
         return self.unidades[nombre_unidad]
-    
+
     def crear_unidad(self, nombre_unidad):
+        #Busca la plantilla correspondiente
         plantilla = self.obtener_plantilla(nombre_unidad)
 
+        #Comprueba que la unidad exista
         if plantilla is None:
             print(f"La unidad {nombre_unidad} no pertenece a {self.nombre}")
             return None
-        
+
+        #Retorna una copia nueva e independiente
         return plantilla.crear_copia()
-    
+
     def obtener_informacion(self):
+        #Retorna la información general de la facción
         return {
             "nombre": self.nombre,
             "descripcion": self.descripcion,
-            "unidades":  self.listar_unidades()
+            "unidades": self.listar_unidades()
         }
-    
+
     def __str__(self):
-        return f"{self.nombre}: {",".join(self.listar_unidades())}"
+        #Retorna una representación legible de la facción
+        return f"{self.nombre}: {', '.join(self.listar_unidades())}"
+
+
+#Plantillas de la facción Humano
+VALQUIRIA = Unidad(
+    nombre="Valquiria",
+    faccion="Humano",
+    costo=180,
+    vida=140,
+    daño=35,
+    movimiento=3,
+    habilidad="Golpe doble",
+    tipo_habilidad="ataque_doble",
+    recarga_habilidad=3,
+    sprites={
