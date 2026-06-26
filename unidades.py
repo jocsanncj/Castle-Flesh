@@ -34,3 +34,24 @@ class Unidad:
         self.turnos_mov_extra = 0
         self.turnos_protecc = 0
         self.turnos_congelada = 0
+
+    def recibir_daño(self, cantidad):
+        if not isinstance(cantidad, int, float):
+            print("La cantidad de daño debe ser numérica")
+            return False
+        
+        if cantidad < 0:
+            print("El daño no puede ser negativo")
+            return False
+        
+
+        if self.turnos_protecc > 0:
+            cantidad = cantidad / 2
+        
+        self.vida -= cantidad
+
+        if self.vida <= 0:
+            self.vida = 0
+            self.estado = "eliminado"
+
+        return True
