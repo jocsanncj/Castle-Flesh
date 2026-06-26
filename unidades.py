@@ -72,4 +72,44 @@ class Unidad:
         self.vida = min(self.vida + cantidad, self.vida_maxima)
         return True
     
-    
+    def atacar(self, objetivo):
+        #Comprueba que la unidad pueda actuar
+        if not self.puede_actuar():
+            print(f"{self.nombre} no puede atacar en este momento")
+            return False
+
+        #Comprueba que el objetivo tenga un método para recibir daño
+        if not hasattr(objetivo, "recibir_daño"):
+            print("El objetivo no puede recibir daño")
+            return False
+
+        #Aplica el daño básico al objetivo
+        objetivo.recibir_daño(self.daño)
+        return True
+
+    def mover(self, nueva_posicion):
+        #Comprueba que la unidad pueda actuar
+        if not self.puede_actuar():
+            print(f"{self.nombre} no puede moverse en este momento")
+            return False
+
+        #Comprueba que la posición tenga fila y columna
+        if not isinstance(nueva_posicion, tuple) or len(nueva_posicion) != 2:
+            print("La posición debe tener el formato (fila, columna)")
+            return False
+
+        #Guarda la nueva posición de la unidad
+        self.posicion = nueva_posicion
+        return True
+
+    def obtener_movimiento_actual(self):
+        #Retorna el movimiento básico más cualquier aumento temporal
+        return self.movimiento + self.movimiento_extra
+
+    def puede_actuar(self):
+        #Comprueba que la unidad esté activa y no esté congelada
+        return not self.esta_eliminada() and self.turnos_congelada == 0
+
+    def habilidad_disponible(self):
+        #Comprueba si la habilidad está fuera de recarga
+        return self.turnos_recarga == 0 and not self.esta_eliminada()
