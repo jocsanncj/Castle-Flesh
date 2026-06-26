@@ -36,7 +36,7 @@ class Unidad:
         self.turnos_congelada = 0
 
     def recibir_daño(self, cantidad):
-        if not isinstance(cantidad, int, float):
+        if not isinstance(cantidad, (int, float)):
             print("La cantidad de daño debe ser numérica")
             return False
         
@@ -55,3 +55,21 @@ class Unidad:
             self.estado = "eliminado"
 
         return True
+    
+    def curar (self, cantidad):
+        if not isinstance(cantidad, (int, float)):
+            print("La cantidad de curación debe ser numérica")
+            return False
+        
+        if cantidad <= 0:
+            print("La curación debe ser mayor que cero")
+            return False
+        
+        if self.esta_eliminada():
+            print("No se puede curar una tropa eliminada")
+            return False
+        
+        self.vida = min(self.vida + cantidad, self.vida_maxima)
+        return True
+    
+    
