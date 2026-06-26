@@ -253,3 +253,11 @@ class Unidad:
             "posicion": self.posicion,
             "estado": self.estado
         }
+    
+    def __str__(self):
+        #Retorna una representación legible de la unidad
+        return (
+            f"{self.nombre} | Facción: {self.faccion} | "
+            f"Vida: {self.vida}/{self.vida_maxima} | "
+            f"Daño: {self.daño} | Movimiento: {self.obtener_movimiento_actual()}"
+        )
