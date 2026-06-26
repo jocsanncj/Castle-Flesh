@@ -174,3 +174,27 @@ class Unidad:
         #Activa la recarga de la habilidad
         self.turnos_recarga = self.recarga_habilidad
         return True
+    
+    def avanzar_turno(self):
+        #Reduce la recarga de la habilidad
+        if self.turnos_recarga > 0:
+            self.turnos_recarga -= 1
+
+        #Reduce los turnos restantes de protección
+        if self.turnos_proteccion > 0:
+            self.turnos_proteccion -= 1
+            if self.turnos_proteccion == 0 and not self.esta_eliminada():
+                self.estado = "activa"
+
+        #Reduce los turnos restantes de congelamiento
+        if self.turnos_congelada > 0:
+            self.turnos_congelada -= 1
+            if self.turnos_congelada == 0 and not self.esta_eliminada():
+                self.estado = "activa"
+
+        #Reduce los turnos restantes del aumento de movimiento
+        if self.turnos_movimiento_extra > 0:
+            self.turnos_movimiento_extra -= 1
+            if self.turnos_movimiento_extra == 0:
+                self.movimiento_extra = 0
+
