@@ -1,9 +1,3 @@
-# ARCHIVO DE INTERFAZ GRÁFICA.
-# Este archivo es el que ve el usuario. Usa Tkinter para crear ventanas, botones, cuadros de texto, pantallas de login, selección de facción, partida activa y ranking.
-# No decide por sí solo quién gana ni guarda datos directamente: llama a Gestion para usuarios y al MotorJuego para la partida.
-#
-
-
 """
 Castle Flesh — menu_gui.py
 
