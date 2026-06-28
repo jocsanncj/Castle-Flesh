@@ -417,34 +417,122 @@ VALQUIRIA = Unidad(
     faccion="Humano",
     costo=180,
     vida=140,
-    daño=35,
+    daño=55,
     movimiento=3,
     habilidad="Golpe doble",
     tipo_habilidad="ataque_doble",
-    recarga_habilidad=3,
+    recarga_habilidad=1,
     sprites = {
         "idle": [
-            "Sprites/Humano/Valquiria/idle/idle1.png", 
-            "Sprites/Humano/Valquiria/idle/idle2.png",
-            "Sprites/Humano/Valquiria/idle/idle3.png",
+            "Sprites/Unidades/Humano/Valquiria/idle/idle1.png", 
+            "Sprites/Unidades/Humano/Valquiria/idle/idle2.png",
+            "Sprites/Unidades/Humano/Valquiria/idle/idle3.png"
         ],
         "walking": [
-            "imagenes/humano/valquiria/walking/walking_1.png",
-            "imagenes/humano/valquiria/walking/walking_2.png",
-            "imagenes/humano/valquiria/walking/walking_3.png",
-            "imagenes/humano/valquiria/walking/walking_4.png"
+            "Sprites/Unidades/Humano/Valquiria/walking/walking1.png",
+            "Sprites/Unidades/Humano/Valquiria/walking/walking10.png",
+            "Sprites/Unidades/Humano/Valquiria/walking/walking2.png",
+            "Sprites/Unidades/Humano/Valquiria/walking/walking3.png",
+            "Sprites/Unidades/Humano/Valquiria/walking/walking4.png",
+            "Sprites/Unidades/Humano/Valquiria/walking/walking5.png",
+            "Sprites/Unidades/Humano/Valquiria/walking/walking6.png",
+            "Sprites/Unidades/Humano/Valquiria/walking/walking7.png",
+            "Sprites/Unidades/Humano/Valquiria/walking/walking8.png",
+            "Sprites/Unidades/Humano/Valquiria/walking/walking9.png"
         ],
         "dying": [
-            "imagenes/humano/valquiria/dying/dying_1.png",
-            "imagenes/humano/valquiria/dying/dying_2.png",
-            "imagenes/humano/valquiria/dying/dying_3.png",
-            "imagenes/humano/valquiria/dying/dying_4.png"
+            "Sprites/Unidades/Humano/Valquiria/dying/dying1.png",
+            "Sprites/Unidades/Humano/Valquiria/dying/dying2.png",
+            "Sprites/Unidades/Humano/Valquiria/dying/dying3.png",
+            "Sprites/Unidades/Humano/Valquiria/dying/dying4.png",
+            "Sprites/Unidades/Humano/Valquiria/dying/dying5.png",
+            "Sprites/Unidades/Humano/Valquiria/dying/dying6.png",
+            "Sprites/Unidades/Humano/Valquiria/dying/dying7.png",
+            "Sprites/Unidades/Humano/Valquiria/dying/dying8.png",
+            "Sprites/Unidades/Humano/Valquiria/dying/dying9.png",
+            "Sprites/Unidades/Humano/Valquiria/dying/dying10.png",
+            "Sprites/Unidades/Humano/Valquiria/dying/dying11.png",
+            "Sprites/Unidades/Humano/Valquiria/dying/dying12.png",
+            "Sprites/Unidades/Humano/Valquiria/dying/dying13.png",
+            "Sprites/Unidades/Humano/Valquiria/dying/dying14.png",
+            "Sprites/Unidades/Humano/Valquiria/dying/dying15.png"
         ],
         "slashing": [
-            "imagenes/humano/valquiria/slashing/slashing_1.png",
-            "imagenes/humano/valquiria/slashing/slashing_2.png",
-            "imagenes/humano/valquiria/slashing/slashing_3.png",
-            "imagenes/humano/valquiria/slashing/slashing_4.png"
+            "Sprites/Unidades/Humano/Valquiria/slashing/slashing1.png",
+            "Sprites/Unidades/Humano/Valquiria/slashing/slashing2.png",
+            "Sprites/Unidades/Humano/Valquiria/slashing/slashing3.png",
+            "Sprites/Unidades/Humano/Valquiria/slashing/slashing4.png",
+            "Sprites/Unidades/Humano/Valquiria/slashing/slashing5.png",
+            "Sprites/Unidades/Humano/Valquiria/slashing/slashing6.png",
+            "Sprites/Unidades/Humano/Valquiria/slashing/slashing7.png",
+            "Sprites/Unidades/Humano/Valquiria/slashing/slashing8.png",
+            "Sprites/Unidades/Humano/Valquiria/slashing/slashing9.png",
+            "Sprites/Unidades/Humano/Valquiria/slashing/slashing10.png",
+            "Sprites/Unidades/Humano/Valquiria/slashing/slashing11.png",
+            "Sprites/Unidades/Humano/Valquiria/slashing/slashing12.png"
+        ]
+    }
+)
+
+MATON = Unidad(
+    nombre="Matón",
+    faccion="Humano",
+    costo=220,
+    vida=300,
+    daño=80,
+    movimiento=2,
+    habilidad="Escudo resistente",
+    tipo_habilidad="escudo",
+    recarga_habilidad=2,
+    sprites={
+        "idle": [
+            "Sprites\Unidades\Humano\Maton\idle\idle1.png",
+            "Sprites\Unidades\Humano\Maton\idle\idle2.png",
+            "Sprites\Unidades\Humano\Maton\idle\idle3.png"
+        ],
+        "walking": [
+            "Sprites\Unidades\Humano\Bandido\walking\walking1.png",
+            "Sprites\Unidades\Humano\Bandido\walking\walking2.png",
+            "Sprites\Unidades\Humano\Bandido\walking\walking3.png",
+            "Sprites\Unidades\Humano\Bandido\walking\walking4.png",
+            "Sprites\Unidades\Humano\Bandido\walking\walking5.png",
+            "Sprites\Unidades\Humano\Bandido\walking\walking6.png",
+            "Sprites\Unidades\Humano\Bandido\walking\walking7.png",
+            "Sprites\Unidades\Humano\Bandido\walking\walking8.png",
+            "Sprites\Unidades\Humano\Bandido\walking\walking9.png",
+            "Sprites\Unidades\Humano\Bandido\walking\walking10.png",
+            "Sprites\Unidades\Humano\Bandido\walking\walking11.png",
+            "Sprites\Unidades\Humano\Bandido\walking\walking12.png",
+            "Sprites\Unidades\Humano\Bandido\walking\walking13.png",
+            "Sprites\Unidades\Humano\Bandido\walking\walking14.png",
+            "Sprites\Unidades\Humano\Bandido\walking\walking15.png",
+            "Sprites\Unidades\Humano\Bandido\walking\walking16.png",
+            "Sprites\Unidades\Humano\Bandido\walking\walking17.png",
+            "Sprites\Unidades\Humano\Bandido\walking\walking18.png"
+        ],
+        "dying": [
+            "Sprites\Unidades\Humano\Maton\dying\dying1.png",
+            "Sprites\Unidades\Humano\Maton\dying\dying2.png",
+            "Sprites\Unidades\Humano\Maton\dying\dying3.png",
+            "Sprites\Unidades\Humano\Maton\dying\dying4.png",
+            "Sprites\Unidades\Humano\Maton\dying\dying5.png",
+            "Sprites\Unidades\Humano\Maton\dying\dying6.png",
+            "Sprites\Unidades\Humano\Maton\dying\dying7.png",
+            "Sprites\Unidades\Humano\Maton\dying\dying8.png",
+            "Sprites\Unidades\Humano\Maton\dying\dying9.png",
+            "Sprites\Unidades\Humano\Maton\dying\dying10.png"
+        ],
+        "slashing": [
+            "Sprites\Unidades\Humano\Maton\slashing\slashing1.png",
+            "Sprites\Unidades\Humano\Maton\slashing\slashing2.png",
+            "Sprites\Unidades\Humano\Maton\slashing\slashing3.png",
+            "Sprites\Unidades\Humano\Maton\slashing\slashing4.png",
+            "Sprites\Unidades\Humano\Maton\slashing\slashing5.png",
+            "Sprites\Unidades\Humano\Maton\slashing\slashing6.png",
+            "Sprites\Unidades\Humano\Maton\slashing\slashing7.png",
+            "Sprites\Unidades\Humano\Maton\slashing\slashing8.png",
+            "Sprites\Unidades\Humano\Maton\slashing\slashing9.png",
+            "Sprites\Unidades\Humano\Maton\slashing\slashing10.png"
         ]
     }
 )
