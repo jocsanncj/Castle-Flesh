@@ -422,4 +422,29 @@ VALQUIRIA = Unidad(
     habilidad="Golpe doble",
     tipo_habilidad="ataque_doble",
     recarga_habilidad=3,
-    sprites={
+    sprites = {
+        "idle": [
+            "Sprites/Humano/Valquiria/idle/idle1.png", 
+            "Sprites/Humano/Valquiria/idle/idle2.png",
+            "Sprites/Humano/Valquiria/idle/idle3.png",
+        ],
+        "walking": [
+            "imagenes/humano/valquiria/walking/walking_1.png",
+            "imagenes/humano/valquiria/walking/walking_2.png",
+            "imagenes/humano/valquiria/walking/walking_3.png",
+            "imagenes/humano/valquiria/walking/walking_4.png"
+        ],
+        "dying": [
+            "imagenes/humano/valquiria/dying/dying_1.png",
+            "imagenes/humano/valquiria/dying/dying_2.png",
+            "imagenes/humano/valquiria/dying/dying_3.png",
+            "imagenes/humano/valquiria/dying/dying_4.png"
+        ],
+        "slashing": [
+            "imagenes/humano/valquiria/slashing/slashing_1.png",
+            "imagenes/humano/valquiria/slashing/slashing_2.png",
+            "imagenes/humano/valquiria/slashing/slashing_3.png",
+            "imagenes/humano/valquiria/slashing/slashing_4.png"
+        ]
+    }
+)
