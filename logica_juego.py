@@ -1,17 +1,4 @@
-"""
-Castle Flesh — logica_juego.py
-
-Motor principal compatible con:
-  - gestion.py   (clase Gestion)
-  - unidades.py  (clase Unidad, clase Faccion)
-
-Facciones reconocidas: "Humano", "Leyenda", "No Muerto"
-Unidades por facción:
-  Humano     Bandido, Matón, Valquiria
-  Leyenda    Goblin, Golem, Minotauro
-  No Muerto  Espectro, Esqueleto, Zombie
-
-"""
+# Logica Castle-FLesh
 
 from __future__ import annotations
 from dataclasses import dataclass, field
