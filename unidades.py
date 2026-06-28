@@ -430,7 +430,6 @@ VALQUIRIA = Unidad(
         ],
         "walking": [
             "Sprites/Unidades/Humano/Valquiria/walking/walking1.png",
-            "Sprites/Unidades/Humano/Valquiria/walking/walking10.png",
             "Sprites/Unidades/Humano/Valquiria/walking/walking2.png",
             "Sprites/Unidades/Humano/Valquiria/walking/walking3.png",
             "Sprites/Unidades/Humano/Valquiria/walking/walking4.png",
@@ -438,7 +437,8 @@ VALQUIRIA = Unidad(
             "Sprites/Unidades/Humano/Valquiria/walking/walking6.png",
             "Sprites/Unidades/Humano/Valquiria/walking/walking7.png",
             "Sprites/Unidades/Humano/Valquiria/walking/walking8.png",
-            "Sprites/Unidades/Humano/Valquiria/walking/walking9.png"
+            "Sprites/Unidades/Humano/Valquiria/walking/walking9.png",
+            "Sprites/Unidades/Humano/Valquiria/walking/walking10.png"
         ],
         "dying": [
             "Sprites/Unidades/Humano/Valquiria/dying/dying1.png",
@@ -486,53 +486,590 @@ MATON = Unidad(
     recarga_habilidad=2,
     sprites={
         "idle": [
-            "Sprites\Unidades\Humano\Maton\idle\idle1.png",
-            "Sprites\Unidades\Humano\Maton\idle\idle2.png",
-            "Sprites\Unidades\Humano\Maton\idle\idle3.png"
+            "Sprites/Unidades/Humano/Maton/idle/idle1.png",
+            "Sprites/Unidades/Humano/Maton/idle/idle2.png",
+            "Sprites/Unidades/Humano/Maton/idle/idle3.png"
         ],
         "walking": [
-            "Sprites\Unidades\Humano\Bandido\walking\walking1.png",
-            "Sprites\Unidades\Humano\Bandido\walking\walking2.png",
-            "Sprites\Unidades\Humano\Bandido\walking\walking3.png",
-            "Sprites\Unidades\Humano\Bandido\walking\walking4.png",
-            "Sprites\Unidades\Humano\Bandido\walking\walking5.png",
-            "Sprites\Unidades\Humano\Bandido\walking\walking6.png",
-            "Sprites\Unidades\Humano\Bandido\walking\walking7.png",
-            "Sprites\Unidades\Humano\Bandido\walking\walking8.png",
-            "Sprites\Unidades\Humano\Bandido\walking\walking9.png",
-            "Sprites\Unidades\Humano\Bandido\walking\walking10.png",
-            "Sprites\Unidades\Humano\Bandido\walking\walking11.png",
-            "Sprites\Unidades\Humano\Bandido\walking\walking12.png",
-            "Sprites\Unidades\Humano\Bandido\walking\walking13.png",
-            "Sprites\Unidades\Humano\Bandido\walking\walking14.png",
-            "Sprites\Unidades\Humano\Bandido\walking\walking15.png",
-            "Sprites\Unidades\Humano\Bandido\walking\walking16.png",
-            "Sprites\Unidades\Humano\Bandido\walking\walking17.png",
-            "Sprites\Unidades\Humano\Bandido\walking\walking18.png"
+            "Sprites/Unidades/Humano/Maton/walking/walking1.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking2.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking3.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking4.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking5.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking6.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking7.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking8.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking9.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking10.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking11.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking12.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking13.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking14.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking15.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking16.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking17.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking18.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking19.png",
+            "Sprites/Unidades/Humano/Maton/walking/walking20.png"
         ],
         "dying": [
-            "Sprites\Unidades\Humano\Maton\dying\dying1.png",
-            "Sprites\Unidades\Humano\Maton\dying\dying2.png",
-            "Sprites\Unidades\Humano\Maton\dying\dying3.png",
-            "Sprites\Unidades\Humano\Maton\dying\dying4.png",
-            "Sprites\Unidades\Humano\Maton\dying\dying5.png",
-            "Sprites\Unidades\Humano\Maton\dying\dying6.png",
-            "Sprites\Unidades\Humano\Maton\dying\dying7.png",
-            "Sprites\Unidades\Humano\Maton\dying\dying8.png",
-            "Sprites\Unidades\Humano\Maton\dying\dying9.png",
-            "Sprites\Unidades\Humano\Maton\dying\dying10.png"
+            "Sprites/Unidades/Humano/Maton/dying/dying1.png",
+            "Sprites/Unidades/Humano/Maton/dying/dying2.png",
+            "Sprites/Unidades/Humano/Maton/dying/dying3.png",
+            "Sprites/Unidades/Humano/Maton/dying/dying4.png",
+            "Sprites/Unidades/Humano/Maton/dying/dying5.png",
+            "Sprites/Unidades/Humano/Maton/dying/dying6.png",
+            "Sprites/Unidades/Humano/Maton/dying/dying7.png",
+            "Sprites/Unidades/Humano/Maton/dying/dying8.png",
+            "Sprites/Unidades/Humano/Maton/dying/dying9.png",
+            "Sprites/Unidades/Humano/Maton/dying/dying10.png"
         ],
         "slashing": [
-            "Sprites\Unidades\Humano\Maton\slashing\slashing1.png",
-            "Sprites\Unidades\Humano\Maton\slashing\slashing2.png",
-            "Sprites\Unidades\Humano\Maton\slashing\slashing3.png",
-            "Sprites\Unidades\Humano\Maton\slashing\slashing4.png",
-            "Sprites\Unidades\Humano\Maton\slashing\slashing5.png",
-            "Sprites\Unidades\Humano\Maton\slashing\slashing6.png",
-            "Sprites\Unidades\Humano\Maton\slashing\slashing7.png",
-            "Sprites\Unidades\Humano\Maton\slashing\slashing8.png",
-            "Sprites\Unidades\Humano\Maton\slashing\slashing9.png",
-            "Sprites\Unidades\Humano\Maton\slashing\slashing10.png"
+            "Sprites/Unidades/Humano/Maton/slashing/slashing1.png",
+            "Sprites/Unidades/Humano/Maton/slashing/slashing2.png",
+            "Sprites/Unidades/Humano/Maton/slashing/slashing3.png",
+            "Sprites/Unidades/Humano/Maton/slashing/slashing4.png",
+            "Sprites/Unidades/Humano/Maton/slashing/slashing5.png",
+            "Sprites/Unidades/Humano/Maton/slashing/slashing6.png",
+            "Sprites/Unidades/Humano/Maton/slashing/slashing7.png",
+            "Sprites/Unidades/Humano/Maton/slashing/slashing8.png",
+            "Sprites/Unidades/Humano/Maton/slashing/slashing9.png",
+            "Sprites/Unidades/Humano/Maton/slashing/slashing10.png"
         ]
     }
 )
+
+BANDIDO = Unidad(
+    nombre="Bandido",
+    faccion="Humano",
+    costo=140,
+    vida=95,
+    daño=24,
+    movimiento=5,
+    habilidad="Huida veloz",
+    tipo_habilidad="velocidad",
+    recarga_habilidad=3,
+    sprites={
+        "idle": [
+            "Sprites/Unidades/Humano/Bandido/idle/idle1.png",
+            "Sprites/Unidades/Humano/Bandido/idle/idle2.png",
+            "Sprites/Unidades/Humano/Bandido/idle/idle3.png"
+        ],
+        "walking": [
+            "Sprites/Unidades/Humano/Bandido/walking/walking1.png",
+            "Sprites/Unidades/Humano/Bandido/walking/walking2.png",
+            "Sprites/Unidades/Humano/Bandido/walking/walking3.png",
+            "Sprites/Unidades/Humano/Bandido/walking/walking4.png",
+            "Sprites/Unidades/Humano/Bandido/walking/walking5.png",
+            "Sprites/Unidades/Humano/Bandido/walking/walking6.png",
+            "Sprites/Unidades/Humano/Bandido/walking/walking7.png",
+            "Sprites/Unidades/Humano/Bandido/walking/walking8.png",
+            "Sprites/Unidades/Humano/Bandido/walking/walking9.png",
+            "Sprites/Unidades/Humano/Bandido/walking/walking10.png",
+            "Sprites/Unidades/Humano/Bandido/walking/walking11.png",
+            "Sprites/Unidades/Humano/Bandido/walking/walking12.png",
+            "Sprites/Unidades/Humano/Bandido/walking/walking13.png",
+            "Sprites/Unidades/Humano/Bandido/walking/walking14.png",
+            "Sprites/Unidades/Humano/Bandido/walking/walking15.png",
+            "Sprites/Unidades/Humano/Bandido/walking/walking16.png",
+            "Sprites/Unidades/Humano/Bandido/walking/walking17.png",
+            "Sprites/Unidades/Humano/Bandido/walking/walking18.png"
+        ],
+        "dying": [
+            "Sprites/Unidades/Humano/Bandido/dying/dying1.png",
+            "Sprites/Unidades/Humano/Bandido/dying/dying2.png",
+            "Sprites/Unidades/Humano/Bandido/dying/dying3.png",
+            "Sprites/Unidades/Humano/Bandido/dying/dying4.png",
+            "Sprites/Unidades/Humano/Bandido/dying/dying5.png",
+            "Sprites/Unidades/Humano/Bandido/dying/dying6.png",
+            "Sprites/Unidades/Humano/Bandido/dying/dying7.png",
+            "Sprites/Unidades/Humano/Bandido/dying/dying8.png",
+            "Sprites/Unidades/Humano/Bandido/dying/dying9.png",
+            "Sprites/Unidades/Humano/Bandido/dying/dying10.png"
+        ],
+        "slashing": [
+            "Sprites/Unidades/Humano/Bandido/slashing/slashing1.png",
+            "Sprites/Unidades/Humano/Bandido/slashing/slashing2.png",
+            "Sprites/Unidades/Humano/Bandido/slashing/slashing3.png",
+            "Sprites/Unidades/Humano/Bandido/slashing/slashing4.png",
+            "Sprites/Unidades/Humano/Bandido/slashing/slashing5.png",
+            "Sprites/Unidades/Humano/Bandido/slashing/slashing6.png",
+            "Sprites/Unidades/Humano/Bandido/slashing/slashing7.png",
+            "Sprites/Unidades/Humano/Bandido/slashing/slashing8.png",
+            "Sprites/Unidades/Humano/Bandido/slashing/slashing9.png",
+            "Sprites/Unidades/Humano/Bandido/slashing/slashing10.png",
+            "Sprites/Unidades/Humano/Bandido/slashing/slashing11.png",
+            "Sprites/Unidades/Humano/Bandido/slashing/slashing12.png"
+        ]
+    }
+)
+
+#Plantillas de la facción No muerto
+ESQUELETO = Unidad(
+    nombre="Esqueleto",
+    faccion="No muerto",
+    costo=130,
+    vida=85,
+    daño=30,
+    movimiento=4,
+    habilidad="Ataque doble",
+    tipo_habilidad="ataque_doble",
+    recarga_habilidad=3,
+    sprites={
+        "idle": [
+            "Sprites/Unidades/No muerto/Esqueleto/idle/idle1.png",
+            "Sprites/Unidades/No muerto/Esqueleto/idle/idle2.png",
+            "Sprites/Unidades/No muerto/Esqueleto/idle/idle3.png"
+        ],
+        "walking": [
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking1.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking2.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking3.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking4.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking5.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking6.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking7.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking8.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking9.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking10.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking11.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking12.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking13.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking14.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking15.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking16.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking17.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking18.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking19.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking20.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking21.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking22.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking23.png",
+            "Sprites/Unidades/No muerto/Esqueleto/walking/walking24.png"
+        ],
+        "dying": [
+            "Sprites/Unidades/No muerto/Esqueleto/dying/dying1.png",
+            "Sprites/Unidades/No muerto/Esqueleto/dying/dying2.png",
+            "Sprites/Unidades/No muerto/Esqueleto/dying/dying3.png",
+            "Sprites/Unidades/No muerto/Esqueleto/dying/dying4.png",
+            "Sprites/Unidades/No muerto/Esqueleto/dying/dying5.png",
+            "Sprites/Unidades/No muerto/Esqueleto/dying/dying6.png",
+            "Sprites/Unidades/No muerto/Esqueleto/dying/dying7.png",
+            "Sprites/Unidades/No muerto/Esqueleto/dying/dying8.png",
+            "Sprites/Unidades/No muerto/Esqueleto/dying/dying9.png",
+            "Sprites/Unidades/No muerto/Esqueleto/dying/dying10.png",
+            "Sprites/Unidades/No muerto/Esqueleto/dying/dying11.png",
+            "Sprites/Unidades/No muerto/Esqueleto/dying/dying12.png",
+            "Sprites/Unidades/No muerto/Esqueleto/dying/dying13.png",
+            "Sprites/Unidades/No muerto/Esqueleto/dying/dying14.png",
+            "Sprites/Unidades/No muerto/Esqueleto/dying/dying15.png"
+        ],
+        "slashing": [
+            "Sprites/Unidades/No muerto/Esqueleto/slashing/slashing1.png",
+            "Sprites/Unidades/No muerto/Esqueleto/slashing/slashing2.png",
+            "Sprites/Unidades/No muerto/Esqueleto/slashing/slashing3.png",
+            "Sprites/Unidades/No muerto/Esqueleto/slashing/slashing4.png",
+            "Sprites/Unidades/No muerto/Esqueleto/slashing/slashing5.png",
+            "Sprites/Unidades/No muerto/Esqueleto/slashing/slashing6.png",
+            "Sprites/Unidades/No muerto/Esqueleto/slashing/slashing7.png",
+            "Sprites/Unidades/No muerto/Esqueleto/slashing/slashing8.png",
+            "Sprites/Unidades/No muerto/Esqueleto/slashing/slashing9.png",
+            "Sprites/Unidades/No muerto/Esqueleto/slashing/slashing10.png",
+            "Sprites/Unidades/No muerto/Esqueleto/slashing/slashing11.png",
+            "Sprites/Unidades/No muerto/Esqueleto/slashing/slashing12.png"
+        ]
+    }
+)
+
+ZOMBIE = Unidad(
+    nombre="Zombie",
+    faccion="No muerto",
+    costo=190,
+    vida=240,
+    daño=22,
+    movimiento=2,
+    habilidad="Regeneración",
+    tipo_habilidad="regeneracion",
+    recarga_habilidad=4,
+    sprites={
+        "idle": [
+            "Sprites/Unidades/No muerto/Zombie/idle/idle1.png",
+            "Sprites/Unidades/No muerto/Zombie/idle/idle2.png",
+            "Sprites/Unidades/No muerto/Zombie/idle/idle3.png"
+        ],
+        "walking": [
+           "Sprites/Unidades/No muerto/Zombie/walking/walking1.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking2.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking3.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking4.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking5.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking6.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking7.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking8.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking9.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking10.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking11.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking12.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking13.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking14.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking15.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking16.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking17.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking18.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking19.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking20.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking21.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking22.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking23.png",
+            "Sprites/Unidades/No muerto/Zombie/walking/walking24.png"
+        ],
+        "dying": [
+            "Sprites/Unidades/No muerto/Zombie/dying/dying1.png",
+            "Sprites/Unidades/No muerto/Zombie/dying/dying2.png",
+            "Sprites/Unidades/No muerto/Zombie/dying/dying3.png",
+            "Sprites/Unidades/No muerto/Zombie/dying/dying4.png",
+            "Sprites/Unidades/No muerto/Zombie/dying/dying5.png",
+            "Sprites/Unidades/No muerto/Zombie/dying/dying6.png",
+            "Sprites/Unidades/No muerto/Zombie/dying/dying7.png",
+            "Sprites/Unidades/No muerto/Zombie/dying/dying8.png",
+            "Sprites/Unidades/No muerto/Zombie/dying/dying9.png",
+            "Sprites/Unidades/No muerto/Zombie/dying/dying10.png",
+            "Sprites/Unidades/No muerto/Zombie/dying/dying11.png",
+            "Sprites/Unidades/No muerto/Zombie/dying/dying12.png",
+            "Sprites/Unidades/No muerto/Zombie/dying/dying13.png",
+            "Sprites/Unidades/No muerto/Zombie/dying/dying14.png",
+            "Sprites/Unidades/No muerto/Zombie/dying/dying15.png"
+        ],
+        "slashing": [
+            "Sprites/Unidades/No muerto/Zombie/slashing/slashing1.png",
+            "Sprites/Unidades/No muerto/Zombie/slashing/slashing2.png",
+            "Sprites/Unidades/No muerto/Zombie/slashing/slashing3.png",
+            "Sprites/Unidades/No muerto/Zombie/slashing/slashing4.png",
+            "Sprites/Unidades/No muerto/Zombie/slashing/slashing5.png",
+            "Sprites/Unidades/No muerto/Zombie/slashing/slashing6.png",
+            "Sprites/Unidades/No muerto/Zombie/slashing/slashing7.png",
+            "Sprites/Unidades/No muerto/Zombie/slashing/slashing8.png",
+            "Sprites/Unidades/No muerto/Zombie/slashing/slashing9.png",
+            "Sprites/Unidades/No muerto/Zombie/slashing/slashing10.png",
+            "Sprites/Unidades/No muerto/Zombie/slashing/slashing11.png",
+            "Sprites/Unidades/No muerto/Zombie/slashing/slashing12.png"
+        ]
+    }
+)
+
+ESPECTRO = Unidad(
+    nombre="Espectro",
+    faccion="No muerto",
+    costo=210,
+    vida=110,
+    daño=32,
+    movimiento=5,
+    habilidad="Intangibilidad",
+    tipo_habilidad="intangibilidad",
+    recarga_habilidad=4,
+    sprites={
+        "idle": [
+            "Sprites/Unidades/No muerto/Espectro/idle/idle1.png",
+            "Sprites/Unidades/No muerto/Espectro/idle/idle2.png",
+            "Sprites/Unidades/No muerto/Espectro/idle/idle3.png"
+        ],
+        "walking": [
+            "Sprites/Unidades/No muerto/Espectro/walking/walking1.png",
+            "Sprites/Unidades/No muerto/Espectro/walking/walking2.png",
+            "Sprites/Unidades/No muerto/Espectro/walking/walking3.png",
+            "Sprites/Unidades/No muerto/Espectro/walking/walking4.png",
+            "Sprites/Unidades/No muerto/Espectro/walking/walking5.png",
+            "Sprites/Unidades/No muerto/Espectro/walking/walking6.png",
+            "Sprites/Unidades/No muerto/Espectro/walking/walking7.png",
+            "Sprites/Unidades/No muerto/Espectro/walking/walking8.png",
+            "Sprites/Unidades/No muerto/Espectro/walking/walking9.png",
+            "Sprites/Unidades/No muerto/Espectro/walking/walking10.png",
+            "Sprites/Unidades/No muerto/Espectro/walking/walking11.png",
+            "Sprites/Unidades/No muerto/Espectro/walking/walking12.png"
+        ],
+        "dying": [
+            "Sprites/Unidades/No muerto/Espectro/dying/dying1.png",
+            "Sprites/Unidades/No muerto/Espectro/dying/dying2.png",
+            "Sprites/Unidades/No muerto/Espectro/dying/dying3.png",
+            "Sprites/Unidades/No muerto/Espectro/dying/dying4.png",
+            "Sprites/Unidades/No muerto/Espectro/dying/dying5.png",
+            "Sprites/Unidades/No muerto/Espectro/dying/dying6.png",
+            "Sprites/Unidades/No muerto/Espectro/dying/dying7.png",
+            "Sprites/Unidades/No muerto/Espectro/dying/dying8.png",
+            "Sprites/Unidades/No muerto/Espectro/dying/dying9.png",
+            "Sprites/Unidades/No muerto/Espectro/dying/dying10.png",
+            "Sprites/Unidades/No muerto/Espectro/dying/dying11.png",
+            "Sprites/Unidades/No muerto/Espectro/dying/dying12.png",
+            "Sprites/Unidades/No muerto/Espectro/dying/dying13.png",
+            "Sprites/Unidades/No muerto/Espectro/dying/dying14.png",
+            "Sprites/Unidades/No muerto/Espectro/dying/dying15.png"
+        ],
+        "slashing": [
+            "Sprites/Unidades/No muerto/Espectro/slashing/slashing1.png",
+            "Sprites/Unidades/No muerto/Espectro/slashing/slashing2.png",
+            "Sprites/Unidades/No muerto/Espectro/slashing/slashing3.png",
+            "Sprites/Unidades/No muerto/Espectro/slashing/slashing4.png",
+            "Sprites/Unidades/No muerto/Espectro/slashing/slashing5.png",
+            "Sprites/Unidades/No muerto/Espectro/slashing/slashing6.png",
+            "Sprites/Unidades/No muerto/Espectro/slashing/slashing7.png",
+            "Sprites/Unidades/No muerto/Espectro/slashing/slashing8.png",
+            "Sprites/Unidades/No muerto/Espectro/slashing/slashing9.png",
+            "Sprites/Unidades/No muerto/Espectro/slashing/slashing10.png",
+            "Sprites/Unidades/No muerto/Espectro/slashing/slashing11.png",
+            "Sprites/Unidades/No muerto/Espectro/slashing/slashing12.png"
+        ]
+    }
+)
+
+#Plantillas de la facción Leyenda
+GOBLIN = Unidad(
+    nombre="Goblin",
+    faccion="Leyenda",
+    costo=120,
+    vida=80,
+    daño=20,
+    movimiento=6,
+    habilidad="Carrera salvaje",
+    tipo_habilidad="velocidad",
+    recarga_habilidad=3,
+    sprites={
+        "idle": [
+            "Sprites/Unidades/Leyenda/Goblin/idle/idle1.png",
+            "Sprites/Unidades/Leyenda/Goblin/idle/idle2.png",
+            "Sprites/Unidades/Leyenda/Goblin/idle/idle3.png"
+        ],
+        "walking": [
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking1.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking2.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking3.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking4.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking5.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking6.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking7.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking8.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking9.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking10.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking11.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking12.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking13.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking14.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking15.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking16.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking17.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking18.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking19.png",
+            "Sprites/Unidades/Leyenda/Goblin/walking/walking20.png"
+        ],
+        "dying": [
+            "Sprites/Unidades/Leyenda/Goblin/dying/dying1.png",
+            "Sprites/Unidades/Leyenda/Goblin/dying/dying2.png",
+            "Sprites/Unidades/Leyenda/Goblin/dying/dying3.png",
+            "Sprites/Unidades/Leyenda/Goblin/dying/dying4.png",
+            "Sprites/Unidades/Leyenda/Goblin/dying/dying5.png",
+            "Sprites/Unidades/Leyenda/Goblin/dying/dying6.png",
+            "Sprites/Unidades/Leyenda/Goblin/dying/dying7.png",
+            "Sprites/Unidades/Leyenda/Goblin/dying/dying8.png",
+            "Sprites/Unidades/Leyenda/Goblin/dying/dying9.png",
+            "Sprites/Unidades/Leyenda/Goblin/dying/dying10.png"
+        ],
+        "slashing": [
+            "Sprites/Unidades/Leyenda/Goblin/slashing/slashing1.png",
+            "Sprites/Unidades/Leyenda/Goblin/slashing/slashing2.png",
+            "Sprites/Unidades/Leyenda/Goblin/slashing/slashing3.png",
+            "Sprites/Unidades/Leyenda/Goblin/slashing/slashing4.png",
+            "Sprites/Unidades/Leyenda/Goblin/slashing/slashing5.png",
+            "Sprites/Unidades/Leyenda/Goblin/slashing/slashing6.png",
+            "Sprites/Unidades/Leyenda/Goblin/slashing/slashing7.png",
+            "Sprites/Unidades/Leyenda/Goblin/slashing/slashing8.png",
+            "Sprites/Unidades/Leyenda/Goblin/slashing/slashing9.png",
+            "Sprites/Unidades/Leyenda/Goblin/slashing/slashing10.png"
+        ]
+    }
+)
+
+MINOTAURO = Unidad(
+    nombre="Minotauro",
+    faccion="Leyenda",
+    costo=250,
+    vida=210,
+    daño=45,
+    movimiento=3,
+    habilidad="Embate en área",
+    tipo_habilidad="daño_area",
+    recarga_habilidad=4,
+    sprites={
+        "idle": [
+            "Sprites/Unidades/Leyenda/Minotauro/idle/idle1.png",
+            "Sprites/Unidades/Leyenda/Minotauro/idle/idle2.png",
+            "Sprites/Unidades/Leyenda/Minotauro/idle/idle3.png"
+        ],
+        "walking": [
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking1.png",
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking2.png",
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking3.png",
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking4.png",
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking5.png",
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking6.png",
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking7.png",
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking8.png",
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking9.png",
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking10.png",
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking11.png",
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking12.png",
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking13.png",
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking14.png",
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking15.png",
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking16.png",
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking17.png",
+            "Sprites/Unidades/Leyenda/Minotauro/walking/walking18.png"
+        ],
+        "dying": [
+            "Sprites/Unidades/Leyenda/Minotauro/dying/dying1.png",
+            "Sprites/Unidades/Leyenda/Minotauro/dying/dying2.png",
+            "Sprites/Unidades/Leyenda/Minotauro/dying/dying3.png",
+            "Sprites/Unidades/Leyenda/Minotauro/dying/dying4.png",
+            "Sprites/Unidades/Leyenda/Minotauro/dying/dying5.png",
+            "Sprites/Unidades/Leyenda/Minotauro/dying/dying6.png",
+            "Sprites/Unidades/Leyenda/Minotauro/dying/dying7.png",
+            "Sprites/Unidades/Leyenda/Minotauro/dying/dying8.png",
+            "Sprites/Unidades/Leyenda/Minotauro/dying/dying9.png",
+            "Sprites/Unidades/Leyenda/Minotauro/dying/dying10.png",
+            "Sprites/Unidades/Leyenda/Minotauro/dying/dying11.png",
+            "Sprites/Unidades/Leyenda/Minotauro/dying/dying12.png",
+            "Sprites/Unidades/Leyenda/Minotauro/dying/dying13.png",
+            "Sprites/Unidades/Leyenda/Minotauro/dying/dying14.png",
+            "Sprites/Unidades/Leyenda/Minotauro/dying/dying15.png"
+        ],
+        "slashing": [
+            "Sprites/Unidades/Leyenda/Minotauro/slashing/slashing1.png",
+            "Sprites/Unidades/Leyenda/Minotauro/slashing/slashing2.png",
+            "Sprites/Unidades/Leyenda/Minotauro/slashing/slashing3.png",
+            "Sprites/Unidades/Leyenda/Minotauro/slashing/slashing4.png",
+            "Sprites/Unidades/Leyenda/Minotauro/slashing/slashing5.png",
+            "Sprites/Unidades/Leyenda/Minotauro/slashing/slashing6.png",
+            "Sprites/Unidades/Leyenda/Minotauro/slashing/slashing7.png",
+            "Sprites/Unidades/Leyenda/Minotauro/slashing/slashing8.png",
+            "Sprites/Unidades/Leyenda/Minotauro/slashing/slashing9.png",
+            "Sprites/Unidades/Leyenda/Minotauro/slashing/slashing10.png",
+            "Sprites/Unidades/Leyenda/Minotauro/slashing/slashing11.png",
+            "Sprites/Unidades/Leyenda/Minotauro/slashing/slashing12.png"
+        ]
+    }
+)
+
+GOLEM = Unidad(
+    nombre="Golem",
+    faccion="Leyenda",
+    costo=280,
+    vida=300,
+    daño=30,
+    movimiento=1,
+    habilidad="Armadura de piedra",
+    tipo_habilidad="escudo",
+    recarga_habilidad=4,
+    sprites={
+        "idle": [
+            "Sprites/Unidades/Leyenda/Golem/idle/idle1.png",
+            "Sprites/Unidades/Leyenda/Golem/idle/idle2.png",
+            "Sprites/Unidades/Leyenda/Golem/idle/idle3.png"
+        ],
+        "walking": [
+            "Sprites/Unidades/Leyenda/Golem/walking/walking1.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking2.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking3.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking4.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking5.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking6.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking7.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking8.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking9.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking10.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking11.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking12.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking13.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking14.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking15.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking16.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking17.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking18.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking19.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking20.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking21.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking22.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking23.png",
+            "Sprites/Unidades/Leyenda/Golem/walking/walking24.png"
+        ],
+        "dying": [
+            "Sprites/Unidades/Leyenda/Golem/dying/dying1.png",
+            "Sprites/Unidades/Leyenda/Golem/dying/dying2.png",
+            "Sprites/Unidades/Leyenda/Golem/dying/dying3.png",
+            "Sprites/Unidades/Leyenda/Golem/dying/dying4.png",
+            "Sprites/Unidades/Leyenda/Golem/dying/dying5.png",
+            "Sprites/Unidades/Leyenda/Golem/dying/dying6.png",
+            "Sprites/Unidades/Leyenda/Golem/dying/dying7.png",
+            "Sprites/Unidades/Leyenda/Golem/dying/dying8.png",
+            "Sprites/Unidades/Leyenda/Golem/dying/dying9.png",
+            "Sprites/Unidades/Leyenda/Golem/dying/dying10.png",
+            "Sprites/Unidades/Leyenda/Golem/dying/dying11.png",
+            "Sprites/Unidades/Leyenda/Golem/dying/dying12.png",
+            "Sprites/Unidades/Leyenda/Golem/dying/dying13.png",
+            "Sprites/Unidades/Leyenda/Golem/dying/dying14.png",
+            "Sprites/Unidades/Leyenda/Golem/dying/dying15.png"
+        ],
+        "slashing": [
+            "Sprites/Unidades/Leyenda/Golem/slashing/slashing1.png",
+            "Sprites/Unidades/Leyenda/Golem/slashing/slashing2.png",
+            "Sprites/Unidades/Leyenda/Golem/slashing/slashing3.png",
+            "Sprites/Unidades/Leyenda/Golem/slashing/slashing4.png",
+            "Sprites/Unidades/Leyenda/Golem/slashing/slashing5.png",
+            "Sprites/Unidades/Leyenda/Golem/slashing/slashing6.png",
+            "Sprites/Unidades/Leyenda/Golem/slashing/slashing7.png",
+            "Sprites/Unidades/Leyenda/Golem/slashing/slashing8.png",
+            "Sprites/Unidades/Leyenda/Golem/slashing/slashing9.png",
+            "Sprites/Unidades/Leyenda/Golem/slashing/slashing10.png",
+            "Sprites/Unidades/Leyenda/Golem/slashing/slashing11.png",
+            "Sprites/Unidades/Leyenda/Golem/slashing/slashing12.png"
+        ]
+    }
+)
+
+#Catálogo general de facciones disponibles
+FACCIONES = {
+    "Humano": Faccion(
+        nombre="Humano",
+        descripcion="Unidades equilibradas con buena resistencia y velocidad.",
+        unidades={
+            "Valquiria": VALQUIRIA,
+            "Matón": MATON,
+            "Bandido": BANDIDO
+        }
+    ),
+    "No muerto": Faccion(
+        nombre="No muerto",
+        descripcion="Unidades resistentes con habilidades de recuperación y evasión.",
+        unidades={
+            "Esqueleto": ESQUELETO,
+            "Zombie": ZOMBIE,
+            "Espectro": ESPECTRO
+        }
+    ),
+    "Leyenda": Faccion(
+        nombre="Leyenda",
+        descripcion="Criaturas fantásticas con características muy marcadas.",
+        unidades={
+            "Goblin": GOBLIN,
+            "Minotauro": MINOTAURO,
+            "Golem": GOLEM
+        }
+    )
+}
+
+
+def obtener_faccion(nombre_faccion):
+    #Busca una facción por su nombre exacto
+    return FACCIONES.get(nombre_faccion)
+
+
+def listar_facciones():
+    #Retorna los nombres de todas las facciones disponibles
+    return list(FACCIONES.keys())
