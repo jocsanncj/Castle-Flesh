@@ -12,7 +12,7 @@ Facciones: Humano | Leyenda | No Muerto
 import tkinter as tk
 from tkinter import messagebox
 from gestion import Gestion
-from logica_juego import (
+from logica import (
     crear_partida, ResultadoCombate, Fase,
     FACCIONES_VALIDAS, DINERO_INICIAL_DEFENSOR, DINERO_INICIAL_ATACANTE
 )
@@ -759,7 +759,7 @@ class HUD(tk.Toplevel):
         self._lbl_placeholder = tk.Label(
         # Nota: self significa “este objeto”; guarda datos propios de esta ventana/clase.
             self.area_mapa,
-            text="[ MAPA DEL JUEGO ]\n\nAquí se renderizará la cuadrícula\nde juego implementada por el equipo.",
+            text="[ MAPA DEL JUEGO ]/n/nAquí se renderizará la cuadrícula/nde juego implementada por el equipo.",
             bg="#0D0B15", fg=FG_DIM,
             font=("Segoe UI", 14, "italic"),
             justify="center"
